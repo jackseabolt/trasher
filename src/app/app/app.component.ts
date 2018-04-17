@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   
     items = [];
     started = false; 
+    newActivated = false; 
 
     ngOnInit() {
         this.service.getAllItems()

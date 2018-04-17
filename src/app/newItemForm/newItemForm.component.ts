@@ -26,6 +26,9 @@ export class NewItemForm {
             Validators.required,
             Validators.minLength(3)
         ]), 
+        phone: new FormControl('', [
+            Validators.minLength(10)
+        ]), 
         'desired_reply': new FormControl()
     });
 
@@ -39,6 +42,10 @@ export class NewItemForm {
 
     get city() {
         return this.form.get('city');
+    }
+
+    get phone() {
+        return this.form.get('phone');
     }
 
     get desired_reply() {
