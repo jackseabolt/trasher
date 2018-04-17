@@ -1,0 +1,12 @@
+.alert, p {
+    color: rgb(167, 98, 98);
+    font-family: arial;
+    font-size: 14px; 
+    margin: 10px 0px;    
+}
+
+label {
+    color: rgb(0, 0, 0);
+    font-family: arial;
+    font-size: 12px;  
+}

@@ -1,0 +1,62 @@
+<form [formGroup]="form" (ngSubmit)="form.valid && handleSubmit()">
+    <h1>New Item</h1>
+
+    <div>
+        <input 
+            formControlName="description" 
+            name="description" 
+            placeholder="description"
+        >
+        <div *ngIf="description.touched && description.invalid" class="alert">
+            <div class="alert" *ngIf="description.errors.required">
+                Description is required
+            </div>
+            <div class="alert" *ngIf="description.errors.minlength">
+                Description must contain 3 characters
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <input 
+            formControlName="street" 
+            name="street" 
+            placeholder="street"
+        >
+        <div *ngIf="street.touched && street.invalid" class="alert">
+            <div class="alert" *ngIf="street.errors.required">
+                Street is required
+            </div>
+            <div class="alert" *ngIf="street.errors.minlength">
+                Street must contain 3 characters
+            </div>
+         </div>
+    </div>
+
+    <div>
+        <input 
+            formControlName="city" 
+            name="city" 
+            placeholder="city"
+        >
+        <div *ngIf="city.touched && city.invalid" class="alert">
+            <div class="alert" *ngIf="city.errors.required">
+                City is required
+            </div>
+            <div class="alert" *ngIf="city.errors.minlength">
+                City must contain 3 characters
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label><input 
+            formControlName="desired_reply" 
+            name="desired_reply" 
+            type="checkbox"
+            checked="false"
+        >Reply desired?</label>
+    </div>
+
+    <button type="submit">Report</button>
+</form>

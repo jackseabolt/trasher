@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
+import { AppComponent } from './app/app.component';
+import { NewItemForm } from './newItemForm/newItemForm.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { ItemService } from './services/item.service';
+import { Board } from './board/board.component';
+import { BoardItem } from './boardItem/boardItem.component'; 
+import { Home } from './home/home.component'; 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewItemForm,
+    Board, 
+    BoardItem, 
+    Home
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    ReactiveFormsModule, 
+    FormsModule, 
+    HttpModule
   ],
-  providers: [],
+  providers: [ItemService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
