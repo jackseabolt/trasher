@@ -8,6 +8,7 @@ import { ItemService } from './services/item.service';
 import { Board } from './board/board.component';
 import { BoardItem } from './boardItem/boardItem.component'; 
 import { Home } from './home/home.component'; 
+import { Navigation } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { Home } from './home/home.component';
     NewItemForm,
     Board, 
     BoardItem, 
-    Home
+    Home, 
+    Navigation
   ],
   imports: [
     BrowserModule, 

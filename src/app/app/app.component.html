@@ -1,5 +1,6 @@
 <div>
   <Home *ngIf="!started" (start)="started=true"></Home>
+  <Navigation *ngIf="started" (start)="started=false"></Navigation>
   <NewItemForm *ngIf="started" (submit)="handleNewItem()"></NewItemForm>
   <Board *ngIf="started" [items]="items" (delete)="handleNewItem()"></Board>
 </div>
