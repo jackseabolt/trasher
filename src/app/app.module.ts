@@ -9,7 +9,8 @@ import { Board } from './board/board.component';
 import { BoardItem } from './boardItem/boardItem.component'; 
 import { Home } from './home/home.component'; 
 import { Navigation } from './navigation/navigation.component';
-
+import { Main } from './main/main.component';
+import { RouterModule} from '@angular/router'; 
 
 @NgModule({
   declarations: [
@@ -18,13 +19,18 @@ import { Navigation } from './navigation/navigation.component';
     Board, 
     BoardItem, 
     Home, 
-    Navigation
+    Navigation, 
+    Main
   ],
   imports: [
     BrowserModule, 
     ReactiveFormsModule, 
     FormsModule, 
-    HttpModule
+    HttpModule, 
+    RouterModule.forRoot([
+      { path: '', component: Home }, 
+      { path: 'main', component: Main }
+    ])
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]

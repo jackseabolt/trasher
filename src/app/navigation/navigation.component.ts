@@ -2,7 +2,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     templateUrl: './navigation.component.html', 
-    selector: 'Navigation'
+    selector: 'Navigation', 
+    styleUrls: ['./navigation.component.css']
 })
 
 export class Navigation {

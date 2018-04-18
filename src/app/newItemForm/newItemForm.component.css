@@ -1,4 +1,4 @@
-.alert, p {
+.alert {
     color: rgb(167, 98, 98);
     font-family: arial;
     font-size: 14px; 
@@ -7,6 +7,59 @@
 
 label {
     color: rgb(0, 0, 0);
-    font-family: arial;
-    font-size: 12px;  
+    font-family: 'Raleway', sans-serif; 
+    font-size: 16px;  
 }
+
+.background {
+    background-color: rgba(0,0,0,0.5); 
+    width: 100vw; 
+    height: 100vh; 
+    position: fixed; 
+    top: 0px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.top-spacing {
+    margin: 20px 0px; 
+}
+
+form {
+    background-color: rgb(221, 221, 221); 
+    padding: 50px; 
+    border-radius: 5px;
+    width: 50%;  
+}
+
+.input {
+    padding: 15px 20px; 
+    border: 0px; 
+    border-radius: 5px; 
+    margin: 10px 0px;
+    width: calc(100% - 40px); 
+    font-size: 18px; 
+    font-family: 'Raleway', sans-serif;  
+}
+
+button {
+    padding: 10px 25px; 
+    background: none;
+    border: 4px solid rgb(67, 67, 94); 
+    font-size: 18px; 
+    color: rgb(67, 67, 94);
+    margin-top: 20px; 
+    transition: 0.5s; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: rgb(67, 67, 94);
+    color: white; 
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: 'Raleway', sans-serif; 
+}
+
