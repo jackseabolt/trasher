@@ -12,6 +12,7 @@ export class NewItemForm {
     constructor(private service: ItemService) {}
 
     @Output() submit = new EventEmitter(); 
+    @Output() close = new EventEmitter(); 
 
     form = new FormGroup({
         description: new FormControl('',[
@@ -57,7 +58,18 @@ export class NewItemForm {
             this.form.value.desired_reply = false
         }
         this.service.createNewItem(this.form.value)
-        this.submit.emit()
-        this.form.reset();  
+        .subscribe(res => {
+            let newItem = res.json()
+            console.log("New item created")
+            console.log(newItem)
+            this.submit.emit()
+            this.close.emit();
+            this.form.reset();  
+        }), 
+        error => console.error(error); 
+    }
+
+    handleClose() {
+        this.close.emit(); 
     }
 }

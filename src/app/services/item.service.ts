@@ -8,12 +8,6 @@ export class ItemService {
 
     createNewItem(data) {
         return this.http.post('http://localhost:8080/item/new', data)
-            .subscribe(res => {
-                let newItem = res.json()
-                console.log("New item created")
-                console.log(newItem)
-            }), 
-            error => console.error(error); 
     }
 
     getAllItems() {
