@@ -2,7 +2,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     templateUrl: './home.component.html', 
-    selector: 'Home'
+    selector: 'Home', 
+    styleUrls: ['./home.component.css']
 })
 
 export class Home {
