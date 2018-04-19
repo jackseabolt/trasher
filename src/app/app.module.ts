@@ -13,6 +13,9 @@ import { Main } from './main/main.component';
 import { RouterModule} from '@angular/router'; 
 import { FocusItemModal } from './focusItemModal/focusItemModal.component';
 import { SearchForm } from './searchForm/searchForm.component';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { About } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { SearchForm } from './searchForm/searchForm.component';
     Navigation, 
     Main, 
     FocusItemModal, 
-    SearchForm
+    SearchForm, 
+    SummaryPipe, 
+    CapitalizePipe, 
+    About
   ],
   imports: [
     BrowserModule, 

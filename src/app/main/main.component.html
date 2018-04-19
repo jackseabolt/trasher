@@ -1,6 +1,11 @@
-<Navigation (start)="started=false" (startNew)="newActivated=!newActivated"></Navigation>
+<Navigation 
+    (start)="started=false" 
+    (startNew)="newActivated=!newActivated"
+    (startAbout)="aboutActivated=!aboutActivated"
+></Navigation>
 <NewItemForm *ngIf="newActivated" (close)="newActivated=!newActivated" (submit)="handleNewItem()"></NewItemForm>
 <FocusItemModal *ngIf="current" [current]="current" (close)="handleCloseModal()"></FocusItemModal>
+<About *ngIf="aboutActivated" (close)="aboutActivated=!aboutActivated"></About>
 <div class="container">
     <Board 
         [items]="items" 

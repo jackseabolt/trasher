@@ -12,6 +12,7 @@ export class Main implements OnInit {
     items = [];
     started = false; 
     newActivated = false;
+    aboutActivated = false; 
     current = null;  
 
     ngOnInit() {
