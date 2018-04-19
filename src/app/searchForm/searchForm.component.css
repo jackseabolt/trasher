@@ -1,14 +1,10 @@
 section {
-    background: rgb(80, 88, 80);
-    padding: 20px; 
+    background: rgb(91, 100, 91);
+    padding: 20px 40px; 
     margin-bottom: 5px; 
     border-radius: 2px; 
     transition: 0.3s; 
     cursor: pointer;  
-}
-
-section:hover {
-    background: rgb(90, 97, 90);  
 }
 
 h4 {
@@ -34,4 +30,14 @@ button {
     font-size: 16px;  
     color: white; 
     background-color: rgb(37, 37, 37); 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+button:hover {
+    background-color: rgb(51, 51, 51); 
+}
+
+.float-right {
+    float: right; 
 }

@@ -1,5 +1,5 @@
 <div>
-    <SearchForm (search)="handleSearch($event)"></SearchForm>
+    <SearchForm (search)="handleSearch($event)" (startNew)="handleOpenNew()"></SearchForm>
     <BoardItem 
         *ngFor="let item of items" 
         [item]="item" 

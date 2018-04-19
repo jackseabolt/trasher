@@ -11,6 +11,7 @@ export class SearchForm {
     constructor(private service: ItemService) {}
     
     @Output('search') search = new EventEmitter();
+    @Output('startNew') startNew = new EventEmitter(); 
     
     city; 
 
@@ -23,5 +24,9 @@ export class SearchForm {
             }), 
             err => console.error(err)
         console.log(this.city)
+    }
+
+    handleNew() {
+        this.startNew.emit(); 
     }
 }

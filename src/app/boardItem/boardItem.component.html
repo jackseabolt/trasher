@@ -1,5 +1,5 @@
 <section>
     <h4>{{ item.city }} - {{ item.description }}</h4>
-    <span *ngIf="!item.completed"><i class="fas fa-check"></i></span>
-    <button (click)="handleDelete()">Delete</button>
+    <span *ngIf="item.completed"><i class="fas fa-check"></i></span>
+    <!-- <button (click)="handleDelete()">Delete</button> -->
 </section>
