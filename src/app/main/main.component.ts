@@ -43,5 +43,8 @@ export class Main implements OnInit {
         this.current = null; 
     }
 
+    handleSearch($event) {
+        this.items = $event.items; 
+    }
 
 }

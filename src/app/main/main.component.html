@@ -2,5 +2,10 @@
 <NewItemForm *ngIf="newActivated" (close)="newActivated=!newActivated" (submit)="handleNewItem()"></NewItemForm>
 <FocusItemModal *ngIf="current" [current]="current" (close)="handleCloseModal()"></FocusItemModal>
 <div class="container">
-    <Board [items]="items" (delete)="handleNewItem()" (focus)="handleFocus($event)"></Board>
+    <Board 
+        [items]="items" 
+        (delete)="handleNewItem()" 
+        (focus)="handleFocus($event)"
+        (search)="handleSearch($event)"
+    ></Board>
 </div>

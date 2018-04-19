@@ -1,0 +1,37 @@
+section {
+    background: rgb(80, 88, 80);
+    padding: 20px; 
+    margin-bottom: 5px; 
+    border-radius: 2px; 
+    transition: 0.3s; 
+    cursor: pointer;  
+}
+
+section:hover {
+    background: rgb(90, 97, 90);  
+}
+
+h4 {
+    margin: 0px; 
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;  
+}
+
+input {
+    padding: 10px 15px; 
+    border: 0px; 
+    border-radius: 5px; 
+    margin: 0px 10px 0px 0px;
+    width: calc(30% - 40px); 
+    font-size: 16px;  
+}
+
+button {
+    padding: 10px 15px; 
+    border: 1px; 
+    border-radius: 5px; 
+    margin: 0px 10px 0px 0px; 
+    font-size: 16px;  
+    color: white; 
+    background-color: rgb(37, 37, 37); 
+}

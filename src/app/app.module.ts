@@ -12,6 +12,7 @@ import { Navigation } from './navigation/navigation.component';
 import { Main } from './main/main.component';
 import { RouterModule} from '@angular/router'; 
 import { FocusItemModal } from './focusItemModal/focusItemModal.component';
+import { SearchForm } from './searchForm/searchForm.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FocusItemModal } from './focusItemModal/focusItemModal.component';
     Home, 
     Navigation, 
     Main, 
-    FocusItemModal
+    FocusItemModal, 
+    SearchForm
   ],
   imports: [
     BrowserModule, 
