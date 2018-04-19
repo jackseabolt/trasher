@@ -8,4 +8,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 export class FocusItemModal {
     @Input('current') current; 
+    @Output('close') close = new EventEmitter(); 
+
+    handleClose() {
+        this.close.emit(); 
+    }
 }

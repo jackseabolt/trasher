@@ -39,5 +39,9 @@ export class Main implements OnInit {
         console.log(this.current)
     }
 
+    handleCloseModal() {
+        this.current = null; 
+    }
+
 
 }
