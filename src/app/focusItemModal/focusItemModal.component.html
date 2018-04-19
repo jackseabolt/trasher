@@ -1,6 +1,11 @@
 <div class="background">
     <section class="modal">
         <span (click)="handleClose()"><i class="fas fa-times"></i></span>
-        <h2>{{ current.city }}</h2>
+        <h2>Report Details</h2>
+        <p>Descption: {{ current.description }}</p>
+        <p>City: {{ current.city }}</p>
+        <p>Street: {{ current.street }}</p>
+        <p>Data reported: {{ current.date_reported | date }}</p>
+        <p>Resolved: {{ current.completed }}</p>
     </section>
 </div>
