@@ -2,9 +2,9 @@
     <section class="modal">
         <span (click)="handleClose()"><i class="fas fa-times"></i></span>
         <h2>Report Details</h2>
-        <p>Description: {{ current.description }}</p>
-        <p>City: {{ current.city }}</p>
-        <p>Street: {{ current.street }}</p>
+        <p>Description: {{ current.description | capitalize }}</p>
+        <p>City: {{ current.city | capitalize }}</p>
+        <p>Street: {{ current.street | capitalize }}</p>
         <p>Data reported: {{ current.date_reported | date }}</p>
         <p>Resolved: {{ current.completed }}</p>
     </section>

@@ -13,6 +13,14 @@ h4 {
     display: inline-block;  
 }
 
+.error {
+    color: rgb(233, 115, 115);
+    margin-top: 20px;
+    margin-left: 10px; 
+    margin-bottom: 0px; 
+    font-family: arial;  
+}
+
 input {
     padding: 10px 15px; 
     border: 0px; 

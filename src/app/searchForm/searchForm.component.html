@@ -1,7 +1,10 @@
 <section>
     <form >
-        <input [(ngModel)]="city" name="city" placeholder="Search by city"/>
-        <button (click)="submitSearch()">Search</button>
-        <button class="float-right" (click)="handleNew()">New Report</button>
+        <div>
+            <input [(ngModel)]="city" name="city" placeholder="Search by city"/>
+            <button (click)="submitSearch()">Search</button>
+            <button class="float-right" (click)="handleNew()">New Report</button>
+        </div>
+        <p *ngIf="error" class="error">{{ error }}</p>
     </form>
 </section>

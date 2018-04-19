@@ -14,8 +14,14 @@ export class SearchForm {
     @Output('startNew') startNew = new EventEmitter(); 
     
     city; 
+    error; 
 
     submitSearch() {
+        if(!this.city) {
+            this.error = "You must enter a value"
+            return
+        }
+        this.error = null; 
         let city = this.city.toLowerCase(); 
         this.service.getItemByCity(city)
             .subscribe(res => {
