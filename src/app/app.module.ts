@@ -16,6 +16,7 @@ import { SearchForm } from './searchForm/searchForm.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { About } from './about/about.component';
+import { RecaptchaModule } from 'ng-recaptcha'; 
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { About } from './about/about.component';
     ReactiveFormsModule, 
     FormsModule, 
     HttpModule, 
+    RecaptchaModule.forRoot(), 
     RouterModule.forRoot([
       { path: '', component: Home }, 
       { path: 'main', component: Main }

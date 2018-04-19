@@ -78,7 +78,11 @@
                     </div>
                 </div>
         </div>
-
+        <re-captcha (resolved)="resolved($event)" siteKey="6LeSYVQUAAAAAH3KNhbgB-hCY162v7R41Z3yg6iY"></re-captcha>
+        <div class="alert" *ngIf="captchaError">
+            Must confirm that you are human
+        </div>
         <button type="submit">Report</button>
+        
     </form>
 </div>
