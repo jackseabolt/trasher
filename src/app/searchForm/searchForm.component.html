@@ -1,0 +1,11 @@
+<section>
+    <form >
+        <div>
+            <input [(ngModel)]="city" name="city" placeholder="Search by city"/>
+            <button (click)="submitSearch()">Search</button>
+            <button class="float-right" (click)="handleNew()">New Report</button>
+            <button class="float-right" (click)="handleViewAll()">View All</button>
+        </div>
+        <p *ngIf="error" class="error">{{ error }}</p>
+    </form>
+</section>

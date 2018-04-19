@@ -1,0 +1,52 @@
+section {
+    background: rgb(91, 100, 91);
+    padding: 20px 40px; 
+    margin-bottom: 5px; 
+    border-radius: 2px; 
+    transition: 0.3s; 
+    cursor: pointer;  
+}
+
+h4 {
+    margin: 0px; 
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;  
+}
+
+.error {
+    color: rgb(233, 115, 115);
+    margin-top: 20px;
+    margin-left: 10px; 
+    margin-bottom: 0px; 
+    font-family: arial;
+    font-size: 14px;   
+}
+
+input {
+    padding: 10px 15px; 
+    border: 0px; 
+    border-radius: 5px; 
+    margin: 0px 10px 0px 0px;
+    width: calc(30% - 40px); 
+    font-size: 16px;  
+}
+
+button {
+    padding: 10px 15px; 
+    border: 1px; 
+    border-radius: 5px; 
+    margin: 0px 10px 0px 0px; 
+    font-size: 16px;  
+    color: white; 
+    background-color: rgb(37, 37, 37); 
+    cursor: pointer; 
+    transition: 0.3s; 
+}
+
+button:hover {
+    background-color: rgb(51, 51, 51); 
+}
+
+.float-right {
+    float: right; 
+}

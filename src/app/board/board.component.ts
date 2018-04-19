@@ -10,6 +10,9 @@ export class Board {
     @Input('items') items; 
     @Output('delete') delete = new EventEmitter();
     @Output('focus') focus = new EventEmitter(); 
+    @Output('search') search = new EventEmitter(); 
+    @Output('startNew') startNew = new EventEmitter(); 
+    @Output('viewAll') viewAll = new EventEmitter();
 
     handleDelete() {
         this.delete.emit(); 
@@ -18,4 +21,18 @@ export class Board {
     handleFocus(item) {
         this.focus.emit(item); 
     }
+
+    handleSearch($event) {
+        console.log($event)
+        this.search.emit($event)
+    }
+
+    handleOpenNew() {
+        this.startNew.emit(); 
+    }
+
+    handleViewAll() {
+        this.viewAll.emit(); 
+    }
+
 }

@@ -14,6 +14,9 @@ export class NewItemForm {
     @Output() submit = new EventEmitter(); 
     @Output() close = new EventEmitter(); 
 
+    captcha = false;
+    captchaError = false;  
+
     form = new FormGroup({
         description: new FormControl('',[
             Validators.required,
@@ -54,6 +57,10 @@ export class NewItemForm {
     }
 
     handleSubmit() {
+        if(!this.captcha) {
+            return this.captchaError = true;
+        }
+        this.captchaError = false; 
         if(this.form.value.desired_reply === null) {
             this.form.value.desired_reply = false
         }
@@ -68,5 +75,9 @@ export class NewItemForm {
 
     handleClose() {
         this.close.emit(); 
+    }
+
+    resolved(captchaResponse: string) {
+        this.captcha = true; 
     }
 }

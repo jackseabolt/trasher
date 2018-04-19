@@ -12,6 +12,11 @@ import { Navigation } from './navigation/navigation.component';
 import { Main } from './main/main.component';
 import { RouterModule} from '@angular/router'; 
 import { FocusItemModal } from './focusItemModal/focusItemModal.component';
+import { SearchForm } from './searchForm/searchForm.component';
+import { SummaryPipe } from './pipes/summary.pipe';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
+import { About } from './about/about.component';
+import { RecaptchaModule } from 'ng-recaptcha'; 
 
 @NgModule({
   declarations: [
@@ -22,13 +27,18 @@ import { FocusItemModal } from './focusItemModal/focusItemModal.component';
     Home, 
     Navigation, 
     Main, 
-    FocusItemModal
+    FocusItemModal, 
+    SearchForm, 
+    SummaryPipe, 
+    CapitalizePipe, 
+    About
   ],
   imports: [
     BrowserModule, 
     ReactiveFormsModule, 
     FormsModule, 
     HttpModule, 
+    RecaptchaModule.forRoot(), 
     RouterModule.forRoot([
       { path: '', component: Home }, 
       { path: 'main', component: Main }
