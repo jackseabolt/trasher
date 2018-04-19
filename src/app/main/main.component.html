@@ -1,5 +1,6 @@
 <Navigation (start)="started=false" (startNew)="newActivated=!newActivated"></Navigation>
 <NewItemForm *ngIf="newActivated" (close)="newActivated=!newActivated" (submit)="handleNewItem()"></NewItemForm>
+<FocusItemModal *ngIf="current" [current]="current"></FocusItemModal>
 <div class="container">
-    <Board [items]="items" (delete)="handleNewItem()"></Board>
+    <Board [items]="items" (delete)="handleNewItem()" (focus)="handleFocus($event)"></Board>
 </div>

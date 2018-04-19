@@ -1,0 +1,23 @@
+section {
+    background: rgb(111, 119, 111);
+    padding: 20px; 
+    margin-bottom: 5px; 
+    border-radius: 2px; 
+    transition: 0.3s; 
+    cursor: pointer;  
+}
+
+section:hover {
+    background: rgb(90, 97, 90);  
+}
+
+h4 {
+    margin: 0px; 
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;  
+}
+
+.fa-check {
+    float: right;
+    color: rgb(184, 231, 184);  
+}

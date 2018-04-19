@@ -3,7 +3,8 @@ import { ItemService } from '../services/item.service';
 
 @Component({
     templateUrl: './boardItem.component.html', 
-    selector: 'BoardItem'
+    selector: 'BoardItem', 
+    styleUrls: ['./boardItem.component.css']
 })
 
 export class BoardItem {

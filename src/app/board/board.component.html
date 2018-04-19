@@ -1,2 +1,8 @@
-<h1>Board</h1>
-<BoardItem *ngFor="let item of items" [item]="item" (delete)="handleDelete()"></BoardItem>
+<div>
+    <BoardItem 
+        *ngFor="let item of items" 
+        [item]="item" 
+        (delete)="handleDelete()"
+        (click)="handleFocus(item)"
+    ></BoardItem>
+</div>

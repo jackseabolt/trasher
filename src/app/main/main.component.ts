@@ -11,7 +11,8 @@ export class Main implements OnInit {
   
     items = [];
     started = false; 
-    newActivated = false; 
+    newActivated = false;
+    current = null;  
 
     ngOnInit() {
         this.service.getAllItems()
@@ -32,5 +33,11 @@ export class Main implements OnInit {
             console.error(error)
         }
     }
+
+    handleFocus($event) {
+        this.current = $event
+        console.log(this.current)
+    }
+
 
 }
