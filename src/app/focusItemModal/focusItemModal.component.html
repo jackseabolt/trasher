@@ -7,5 +7,6 @@
         <p>Street: {{ current.street | capitalize }}</p>
         <p>Data reported: {{ current.date_reported | date }}</p>
         <p>Resolved: {{ current.completed }}</p>
+        <button (click)="handleDelete()">Delete</button>
     </section>
 </div>

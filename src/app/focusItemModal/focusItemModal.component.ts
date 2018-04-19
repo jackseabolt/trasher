@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'; 
+import { ItemService } from '../services/item.service';
 
 @Component({
     selector: 'FocusItemModal', 
@@ -7,10 +8,21 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 
 export class FocusItemModal {
+    constructor(private service: ItemService) {}
+
     @Input('current') current; 
     @Output('close') close = new EventEmitter(); 
+    @Output('delete') delete = new EventEmitter(); 
 
     handleClose() {
         this.close.emit(); 
+    }
+
+    handleDelete() {
+        this.service.deleleteItem(this.current.id)
+            .subscribe(res => {
+                this.delete.emit();
+            }),
+            error => console.error(error);  
     }
 }

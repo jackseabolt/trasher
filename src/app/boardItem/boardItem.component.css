@@ -4,7 +4,8 @@ section {
     margin-bottom: 5px; 
     border-radius: 2px; 
     transition: 0.3s; 
-    cursor: pointer;  
+    cursor: pointer;
+    overflow: auto;  
 }
 
 section:hover {
@@ -20,4 +21,9 @@ h4 {
 .fa-check {
     float: right;
     color: rgb(184, 231, 184);  
+}
+
+
+.float-right {
+    float: right; 
 }

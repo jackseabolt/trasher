@@ -26,6 +26,10 @@ export class NewItemForm {
             Validators.required,
             Validators.minLength(3)
         ]), 
+        // 'cross_street': new FormControl('', [
+        //     Validators.required,
+        //     Validators.minLength(3)
+        // ]), 
         city: new FormControl('', [
             Validators.required,
             Validators.minLength(3)

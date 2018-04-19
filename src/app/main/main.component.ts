@@ -30,6 +30,7 @@ export class Main implements OnInit {
     }
 
     handleNewItem() {
+        this.current = null; 
         this.service.getAllItems()
         .subscribe(res => {
             this.items = res.json().items; 
