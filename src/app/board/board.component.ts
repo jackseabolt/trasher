@@ -2,14 +2,20 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     templateUrl: './board.component.html',
-    selector: 'Board'
+    selector: 'Board', 
+    styleUrls: ['./board.component.css']
 })
 
 export class Board {
     @Input('items') items; 
-    @Output('delete') delete = new EventEmitter(); 
+    @Output('delete') delete = new EventEmitter();
+    @Output('focus') focus = new EventEmitter(); 
 
     handleDelete() {
         this.delete.emit(); 
+    }
+
+    handleFocus(item) {
+        this.focus.emit(item); 
     }
 }

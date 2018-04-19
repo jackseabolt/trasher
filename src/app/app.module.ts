@@ -11,6 +11,7 @@ import { Home } from './home/home.component';
 import { Navigation } from './navigation/navigation.component';
 import { Main } from './main/main.component';
 import { RouterModule} from '@angular/router'; 
+import { FocusItemModal } from './focusItemModal/focusItemModal.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { RouterModule} from '@angular/router';
     BoardItem, 
     Home, 
     Navigation, 
-    Main
+    Main, 
+    FocusItemModal
   ],
   imports: [
     BrowserModule, 

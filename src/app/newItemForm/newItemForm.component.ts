@@ -59,9 +59,6 @@ export class NewItemForm {
         }
         this.service.createNewItem(this.form.value)
         .subscribe(res => {
-            let newItem = res.json()
-            console.log("New item created")
-            console.log(newItem)
             this.submit.emit()
             this.close.emit();
             this.form.reset();  

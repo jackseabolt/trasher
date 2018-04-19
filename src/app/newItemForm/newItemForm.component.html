@@ -1,83 +1,84 @@
 <div class="background">
     <form [formGroup]="form" (ngSubmit)="form.valid && handleSubmit()">
-    <h1>Report A Site</h1>
+        <span (click)="handleClose()"><i class="fas fa-times"></i></span>
+        <h1>Report A Site</h1>
 
-    <div>
-        <input 
-            formControlName="description" 
-            name="description" 
-            placeholder="description"
-            class="input"
-        >
-        <div *ngIf="description.touched && description.invalid" class="alert">
-            <div class="alert" *ngIf="description.errors.required">
-                Description is required
-            </div>
-            <div class="alert" *ngIf="description.errors.minlength">
-                Description must contain 3 characters
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <input 
-            formControlName="street" 
-            name="street" 
-            placeholder="street"
-            class="input"
-        >
-        <div *ngIf="street.touched && street.invalid" class="alert">
-            <div class="alert" *ngIf="street.errors.required">
-                Street is required
-            </div>
-            <div class="alert" *ngIf="street.errors.minlength">
-                Street must contain 3 characters
-            </div>
-        </div>
-    </div>
-
-    <div>
-        <input 
-            formControlName="city" 
-            name="city" 
-            placeholder="city"
-            class="input"
-        >
-        <div *ngIf="city.touched && city.invalid" class="alert">
-            <div class="alert" *ngIf="city.errors.required">
-                City is required
-            </div>
-            <div class="alert" *ngIf="city.errors.minlength">
-                City must contain 3 characters
-            </div>
-        </div>
-    </div>
-
-    <div class="top-spacing">
-        <label><input 
-            formControlName="desired_reply" 
-            name="desired_reply" 
-            type="checkbox"
-            checked="false"
-        >Reply desired?</label>
-    </div>
-
-    <div *ngIf="form.value.desired_reply">
-            <div>
-                <input 
-                    formControlName="phone" 
-                    name="phone" 
-                    placeholder="phone"
-                    class="input"
-                >
-                <div *ngIf="phone.touched && phone.invalid" class="alert">
-                    <div class="alert" *ngIf="phone.errors.minlength">
-                        Phone must contain 10 characters
-                    </div>
+        <div>
+            <input 
+                formControlName="description" 
+                name="description" 
+                placeholder="description"
+                class="input"
+            >
+            <div *ngIf="description.touched && description.invalid" class="alert">
+                <div class="alert" *ngIf="description.errors.required">
+                    Description is required
+                </div>
+                <div class="alert" *ngIf="description.errors.minlength">
+                    Description must contain 3 characters
                 </div>
             </div>
-    </div>
+        </div>
 
-    <button type="submit">Report</button>
+        <div>
+            <input 
+                formControlName="street" 
+                name="street" 
+                placeholder="street"
+                class="input"
+            >
+            <div *ngIf="street.touched && street.invalid" class="alert">
+                <div class="alert" *ngIf="street.errors.required">
+                    Street is required
+                </div>
+                <div class="alert" *ngIf="street.errors.minlength">
+                    Street must contain 3 characters
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <input 
+                formControlName="city" 
+                name="city" 
+                placeholder="city"
+                class="input"
+            >
+            <div *ngIf="city.touched && city.invalid" class="alert">
+                <div class="alert" *ngIf="city.errors.required">
+                    City is required
+                </div>
+                <div class="alert" *ngIf="city.errors.minlength">
+                    City must contain 3 characters
+                </div>
+            </div>
+        </div>
+
+        <div class="top-spacing">
+            <label><input 
+                formControlName="desired_reply" 
+                name="desired_reply" 
+                type="checkbox"
+                checked="false"
+            >Reply desired?</label>
+        </div>
+
+        <div *ngIf="form.value.desired_reply">
+                <div>
+                    <input 
+                        formControlName="phone" 
+                        name="phone" 
+                        placeholder="phone"
+                        class="input"
+                    >
+                    <div *ngIf="phone.touched && phone.invalid" class="alert">
+                        <div class="alert" *ngIf="phone.errors.minlength">
+                            Phone must contain 10 characters
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <button type="submit">Report</button>
     </form>
 </div>
