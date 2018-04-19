@@ -12,6 +12,7 @@ export class SearchForm {
     
     @Output('search') search = new EventEmitter();
     @Output('startNew') startNew = new EventEmitter(); 
+    @Output('viewAll') viewAll = new EventEmitter(); 
     
     city; 
     error; 
@@ -34,5 +35,9 @@ export class SearchForm {
 
     handleNew() {
         this.startNew.emit(); 
+    }
+
+    handleViewAll() {
+        this.viewAll.emit(); 
     }
 }

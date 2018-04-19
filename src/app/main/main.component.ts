@@ -16,13 +16,17 @@ export class Main implements OnInit {
     current = null;  
 
     ngOnInit() {
+        this.handleGetAll();
+    }
+
+    handleGetAll() {
         this.service.getAllItems()
-            .subscribe(res => {
-                this.items = res.json().items; 
-                console.log(this.items)
-            }), error => {
-                console.error(error)
-            }
+        .subscribe(res => {
+            this.items = res.json().items; 
+            console.log(this.items)
+        }), error => {
+            console.error(error)
+        }
     }
 
     handleNewItem() {
