@@ -2,7 +2,7 @@
     color: rgb(233, 115, 115);
     font-family: arial;
     font-size: 14px; 
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: 10px; 
     margin-left: 10px;    
 }
@@ -28,6 +28,10 @@ label {
     margin: 20px 0px; 
 }
 
+.bottom-spacing {
+    margin-bottom: 20px !important; 
+}
+
 .fa-times {
     float: right; 
     opacity: 0.5; 
@@ -46,11 +50,12 @@ form {
     background-color: rgb(231, 231, 231); 
     padding: 50px; 
     border-radius: 5px;
-    width: 50%;  
+    width: 50%; 
+    z-index: 99;  
 }
 
 .input {
-    padding: 15px 20px; 
+    padding: 10px 15px; 
     border: 0px; 
     border-radius: 5px; 
     margin: 10px 0px;

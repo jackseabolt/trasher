@@ -37,6 +37,23 @@
             </div>
         </div>
 
+        <!-- <div>
+            <input 
+                formControlName="cross_street" 
+                name="cross_street" 
+                placeholder="cross street"
+                class="input"
+            >
+            <div *ngIf="cross_street.touched && cross_street.invalid" class="alert">
+                    <div class="alert" *ngIf="cross_street.errors.required">
+                        cross street is required
+                    </div>
+                    <div class="alert" *ngIf="cross_street.errors.minlength">
+                        Cross street must contain 3 characters
+                    </div>
+                </div>
+        </div> -->
+
         <div>
             <input 
                 formControlName="city" 
@@ -69,7 +86,7 @@
                         formControlName="phone" 
                         name="phone" 
                         placeholder="phone"
-                        class="input"
+                        class="input bottom-spacing"
                     >
                     <div *ngIf="phone.touched && phone.invalid" class="alert">
                         <div class="alert" *ngIf="phone.errors.minlength">

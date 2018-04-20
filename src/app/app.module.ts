@@ -17,6 +17,9 @@ import { SummaryPipe } from './pipes/summary.pipe';
 import { CapitalizePipe } from './pipes/capitalize.pipe';
 import { About } from './about/about.component';
 import { RecaptchaModule } from 'ng-recaptcha'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { CapitalizeAllPipe } from './pipes/capitalizeall.pipe';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +33,14 @@ import { RecaptchaModule } from 'ng-recaptcha';
     FocusItemModal, 
     SearchForm, 
     SummaryPipe, 
-    CapitalizePipe, 
+    CapitalizePipe,
+    CapitalizeAllPipe, 
     About
   ],
   imports: [
     BrowserModule, 
     ReactiveFormsModule, 
+    BrowserAnimationsModule,
     FormsModule, 
     HttpModule, 
     RecaptchaModule.forRoot(), 
