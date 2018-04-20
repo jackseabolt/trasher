@@ -5,7 +5,8 @@ section {
     border-radius: 2px; 
     transition: 0.3s; 
     cursor: pointer;
-    overflow: auto;  
+    overflow: auto; 
+    z-index: 5;  
 }
 
 section:hover {

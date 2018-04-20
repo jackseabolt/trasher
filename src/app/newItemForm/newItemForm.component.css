@@ -28,6 +28,10 @@ label {
     margin: 20px 0px; 
 }
 
+.bottom-spacing {
+    margin-bottom: 20px !important; 
+}
+
 .fa-times {
     float: right; 
     opacity: 0.5; 
@@ -46,7 +50,8 @@ form {
     background-color: rgb(231, 231, 231); 
     padding: 50px; 
     border-radius: 5px;
-    width: 50%;  
+    width: 50%; 
+    z-index: 99;  
 }
 
 .input {
