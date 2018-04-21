@@ -43,6 +43,20 @@ div {
     background-color: rgb(48, 48, 49); 
 }
 
+.pagination-block-current {
+    color: white; 
+    background-color: rgb(48, 48, 49);
+    display: inline-block; 
+    text-align: center;   
+    border: 1px solid grey; 
+    font-family: arial;
+    padding: 8px;
+    margin-right: 3px; 
+    transition: 0.5s; 
+    cursor: pointer;    
+}
+
+
 .pagination-container {
     text-align: center; 
     padding-top: 20px; 

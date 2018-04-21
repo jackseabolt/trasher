@@ -46,19 +46,19 @@ export class Board implements OnChanges {
     increaseCurrent() {
         if(this.current < this.pagination - 1) {
             this.current++; 
-            this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8))       
+            this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8));      
         } 
     }
 
     setCurrent(num) {
-        this.current = num -1; 
-        this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8))   
+        this.current = num - 1; 
+        this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8));   
     }
 
     decreaseCurrent() {
         if(this.current > 0 ) {
             this.current--; 
-            this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8))
+            this.currentItems = this.items.slice((this.current * 8), (this.current * 8 + 8));
         }
     }
 

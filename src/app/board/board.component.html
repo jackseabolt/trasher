@@ -14,8 +14,9 @@
     <div *ngIf="pagination > 1" class="pagination-container">
         <div *ngIf="current > 0" class="pagination-block-end" (click)="decreaseCurrent()">Prev</div>
         <div 
-            class="pagination-block" 
+            class="pagination-block"
             *ngFor="let num of paginationArray"
+            [ngClass]="{'pagination-block-current':num - 1 === current}"
             (click)="setCurrent(num)"
         >{{ num }} </div>
         <div *ngIf="current +1 < pagination" class="pagination-block-end" (click)="increaseCurrent()">Next</div>
