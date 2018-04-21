@@ -1,11 +1,20 @@
 import { Component, Output, EventEmitter } from '@angular/core'; 
 import { FormGroup, FormControl, Validators } from '@angular/forms'; 
 import { ItemService } from '../services/item.service'; 
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
     templateUrl: './newItemForm.component.html', 
     selector: 'NewItemForm', 
-    styleUrls: ['./newItemForm.component.css']
+    styleUrls: ['./newItemForm.component.css'], 
+    animations: [
+      trigger('fade', [ 
+        transition('void => *', [
+          style({ opacity: 0 }), 
+          animate(300)
+        ])
+      ])
+    ]
 })
 
 export class NewItemForm {

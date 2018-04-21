@@ -1,5 +1,5 @@
 <div class="background">
-    <form [formGroup]="form" (ngSubmit)="form.valid && handleSubmit()">
+    <form @fade [formGroup]="form" (ngSubmit)="form.valid && handleSubmit()">
         <span (click)="handleClose()"><i class="fas fa-times"></i></span>
         <h2>Report A Site</h2>
 
