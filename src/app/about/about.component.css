@@ -32,7 +32,9 @@
     background-color: rgb(231, 231, 231); 
     padding: 50px; 
     border-radius: 5px;
-    width: 50%;  
+    width: 50%; 
+    max-width: 400px; 
+    text-align: center;  
 }
 
 button {
@@ -53,6 +55,7 @@ button:hover {
 
 h1, h2, h3, h4, h5, p {
     font-family: 'Raleway', sans-serif; 
+    color: rgb(34, 34, 34); 
 }
 
 p { 

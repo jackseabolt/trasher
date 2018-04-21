@@ -34,6 +34,7 @@
     border-radius: 5px;
     width: 50%; 
     max-width: 400px;  
+    transition: 0.3s; 
 }
 
 button {

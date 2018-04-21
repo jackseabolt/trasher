@@ -3,8 +3,8 @@
         <span (click)="handleClose()"><i class="fas fa-times"></i></span>
         <h2>Report Details</h2>
         <p>Description: {{ current.description | capitalize }}</p>
-        <p>City: {{ current.city | capitalize }}</p>
-        <p>Street: {{ current.street | capitalize }}</p>
+        <p>City: {{ current.city | capitalizeAll }}</p>
+        <p>Street: {{ current.street | capitalizeAll }}</p>
         <p>Data reported: {{ current.date_reported | date }}</p>
         <p *ngIf="current.completed">Date resolved: {{ current.date_completed | date }}</p>
         <p>Resolved: {{ current.completed }}</p>
