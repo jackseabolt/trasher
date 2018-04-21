@@ -6,15 +6,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 @Component({
     templateUrl: './boardItem.component.html', 
     selector: 'BoardItem', 
-    styleUrls: ['./boardItem.component.css'], 
-    animations: [
-        trigger('fade', [ 
-            transition('void => *', [
-            style({ opacity: 0 }), 
-            animate(500, style({ opacity: 1, zIndex: 1 }))
-            ])
-        ])
-        ]
+    styleUrls: ['./boardItem.component.css']
 })
 
 export class BoardItem {

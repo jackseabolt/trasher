@@ -9,6 +9,7 @@
     [current]="current" 
     (close)="handleCloseModal()"
     (delete)="handleNewItem()" 
+    (resolve)="getItems()"
 ></FocusItemModal>
 <About *ngIf="aboutActivated" (close)="aboutActivated=!aboutActivated"></About>
 <div class="container">

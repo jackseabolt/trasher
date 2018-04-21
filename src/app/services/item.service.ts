@@ -23,7 +23,7 @@ export class ItemService {
     }
 
     resolveItem(id) {
-        return this.http.delete(`http://localhost:8080/item/resolve/${id}`)            
+        return this.http.put(`http://localhost:8080/item/resolve/${id}`, {})            
     }
     
 }
