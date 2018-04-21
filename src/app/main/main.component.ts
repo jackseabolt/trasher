@@ -68,7 +68,13 @@ export class Main implements OnInit {
     }
 
     handleSearch($event) {
-        this.items = $event.items; 
+        this.items = $event.items;
+        this.pagination = Math.ceil(this.items.length / 8); 
+        let paginationArray = []; 
+        for(let i = 1; i <= this.pagination; i++) {
+            paginationArray.push(i)
+        } 
+        this.paginationArray = paginationArray; 
     }
 
 }

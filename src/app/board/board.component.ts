@@ -21,7 +21,6 @@ export class Board implements OnChanges {
     ngOnChanges() {
         this.currentItems = this.items.slice(0, 8) 
     }
-     
 
     handleDelete() {
         this.delete.emit(); 
