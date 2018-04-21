@@ -22,7 +22,7 @@ export class Main implements OnInit {
     handleGetAll() {
         this.service.getAllItems()
         .subscribe(res => {
-            this.items = res.json().items; 
+            this.items = res.json().items.sort().reverse(); 
             console.log(this.items)
         }), error => {
             console.error(error)
@@ -31,9 +31,18 @@ export class Main implements OnInit {
 
     handleNewItem() {
         this.current = null; 
+        this.getItems();
+    }
+
+    getItems() {
         this.service.getAllItems()
         .subscribe(res => {
-            this.items = res.json().items; 
+            this.items = res.json().items.sort().reverse();
+            const newCurrent = this.items.filter(item => item.description == this.current.description)
+            
+            console.log(newCurrent[0]) 
+            this.current = newCurrent[0]
+
             console.log(this.items)
         }), error => {
             console.error(error)

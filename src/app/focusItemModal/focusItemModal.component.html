@@ -6,7 +6,9 @@
         <p>City: {{ current.city | capitalize }}</p>
         <p>Street: {{ current.street | capitalize }}</p>
         <p>Data reported: {{ current.date_reported | date }}</p>
+        <p *ngIf="current.completed">Date resolved: {{ current.date_completed | date }}</p>
         <p>Resolved: {{ current.completed }}</p>
-        <button (click)="handleDelete()">Delete</button>
+        <button (click)="handleDelete()" class="delete-button">Delete</button>
+        <button (click)="handleResolve()" class="resolve-button">Resolve</button>
     </section>
 </div>

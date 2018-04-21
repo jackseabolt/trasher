@@ -1,5 +1,5 @@
 section {
-    background: rgb(111, 119, 111);
+    background: rgb(165, 165, 165);
     padding: 20px 40px; 
     margin-bottom: 5px; 
     border-radius: 2px; 
@@ -10,7 +10,7 @@ section {
 }
 
 section:hover {
-    background: rgb(90, 97, 90);  
+    background: rgb(143, 143, 143); 
 }
 
 h4 {
@@ -21,10 +21,5 @@ h4 {
 
 .fa-check {
     float: right;
-    color: rgb(184, 231, 184);  
-}
-
-
-.float-right {
-    float: right; 
+    color: rgb(178, 216, 178);  
 }

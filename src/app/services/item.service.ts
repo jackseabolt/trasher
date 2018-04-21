@@ -7,7 +7,6 @@ export class ItemService {
     constructor(private http: Http) {}
 
     createNewItem(data) {
-        console.log("IT FIRED")
         return this.http.post('http://localhost:8080/item/new', data)
     }
 
@@ -22,4 +21,9 @@ export class ItemService {
     getItemByCity(city) {
         return this.http.get(`http://localhost:8080/item/city/${city}`)
     }
+
+    resolveItem(id) {
+        return this.http.put(`http://localhost:8080/item/resolve/${id}`, {})            
+    }
+    
 }

@@ -13,6 +13,7 @@ export class FocusItemModal {
     @Input('current') current; 
     @Output('close') close = new EventEmitter(); 
     @Output('delete') delete = new EventEmitter(); 
+    @Output('resolve') resolve = new EventEmitter(); 
 
     handleClose() {
         this.close.emit(); 
@@ -24,5 +25,13 @@ export class FocusItemModal {
                 this.delete.emit();
             }),
             error => console.error(error);  
+    }
+
+    handleResolve() {
+        this.service.resolveItem(this.current.id)
+            .subscribe(res => {
+                this.resolve.emit(); 
+            }), 
+            error => console.error(error);    
     }
 }

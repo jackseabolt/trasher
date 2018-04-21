@@ -1,5 +1,4 @@
-<section @fade>
+<section>
     <h4>{{ item.city | capitalizeAll }} - {{ item.description | summary | capitalize }}</h4>
     <span *ngIf="item.completed"><i class="fas fa-check"></i></span>
-    <!-- <button class="float-right" (click)="handleDelete()">Delete</button> -->
 </section>
