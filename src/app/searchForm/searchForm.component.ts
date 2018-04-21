@@ -39,5 +39,6 @@ export class SearchForm {
 
     handleViewAll() {
         this.viewAll.emit(); 
+        this.city = null; 
     }
 }

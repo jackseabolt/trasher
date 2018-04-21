@@ -13,7 +13,9 @@ export class Main implements OnInit {
     started = false; 
     newActivated = false;
     aboutActivated = false; 
-    current = null;  
+    current = null; 
+    pagination = 1; 
+    paginationArray = []; 
 
     ngOnInit() {
         this.handleGetAll();
@@ -23,7 +25,12 @@ export class Main implements OnInit {
         this.service.getAllItems()
         .subscribe(res => {
             this.items = res.json().items.sort().reverse(); 
-            console.log(this.items)
+            this.pagination = Math.ceil(this.items.length / 8); 
+            let paginationArray = []; 
+            for(let i = 1; i <= this.pagination; i++) {
+                paginationArray.push(i)
+            } 
+            this.paginationArray = paginationArray; 
         }), error => {
             console.error(error)
         }
@@ -39,11 +46,13 @@ export class Main implements OnInit {
         .subscribe(res => {
             this.items = res.json().items.sort().reverse();
             const newCurrent = this.items.filter(item => item.description == this.current.description)
-            
-            console.log(newCurrent[0]) 
-            this.current = newCurrent[0]
-
-            console.log(this.items)
+            this.pagination = Math.ceil(this.items.length / 8);
+            let paginationArray = []; 
+            for(let i = 1; i <= this.pagination; i++) {
+                paginationArray.push(i)
+            } 
+            this.paginationArray = paginationArray; 
+            this.current = newCurrent[0]; 
         }), error => {
             console.error(error)
         }
@@ -59,7 +68,13 @@ export class Main implements OnInit {
     }
 
     handleSearch($event) {
-        this.items = $event.items; 
+        this.items = $event.items;
+        this.pagination = Math.ceil(this.items.length / 8); 
+        let paginationArray = []; 
+        for(let i = 1; i <= this.pagination; i++) {
+            paginationArray.push(i)
+        } 
+        this.paginationArray = paginationArray; 
     }
 
 }

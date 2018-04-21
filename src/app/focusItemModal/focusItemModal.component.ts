@@ -1,10 +1,19 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'; 
 import { ItemService } from '../services/item.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
     selector: 'FocusItemModal', 
     templateUrl: './focusItemModal.component.html', 
-    styleUrls: ['./focusItemModal.component.css']
+    styleUrls: ['./focusItemModal.component.css'], 
+    animations: [
+      trigger('fade', [ 
+        transition('void => *', [
+          style({ opacity: 0 }), 
+          animate(300)
+        ])
+      ])
+    ]
 })
 
 export class FocusItemModal {

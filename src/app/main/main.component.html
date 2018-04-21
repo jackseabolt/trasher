@@ -15,7 +15,9 @@
 <div class="container">
     <Board 
         [items]="items" 
-        (delete)="handleNewItem()" 
+        [paginationArray]="paginationArray"
+        [pagination]="pagination"
+        (delete)="getItems()" 
         (focus)="handleFocus($event)"
         (search)="handleSearch($event)"
         (startNew)="newActivated=!newActivated"

@@ -1,4 +1,4 @@
 <section>
-    <h4>{{ item.city | capitalizeAll }} - {{ item.description | summary | capitalize }}</h4>
+    <h4>{{ item.city | capitalizeAll }} - {{ item.description | summary | capitalize }} - {{ item.date_reported | date }}</h4>
     <span *ngIf="item.completed"><i class="fas fa-check"></i></span>
 </section>

@@ -1,11 +1,13 @@
-<section>
+<div class="form-container">
     <form >
         <div>
             <input [(ngModel)]="city" name="city" placeholder="Search by city"/>
             <button (click)="submitSearch()">Search</button>
-            <button class="float-right" (click)="handleNew()">New Report</button>
-            <button class="float-right" (click)="handleViewAll()">View All</button>
+            <div class="float-right">
+                <button (click)="handleNew()">New Report</button>
+                <button (click)="handleViewAll()">View All</button>
+            </div>
         </div>
         <p *ngIf="error" class="error">{{ error }}</p>
     </form>
-</section>
+</div>

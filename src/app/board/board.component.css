@@ -6,3 +6,58 @@ div {
 .picture {
     width: 100%; 
 }
+
+.pagination-block {
+    display: inline-block; 
+    text-align: center;   
+    border: 1px solid grey; 
+    background: white; 
+    color: grey;
+    font-family: arial;
+    padding: 8px;
+    margin-right: 3px; 
+    transition: 0.5s; 
+    cursor: pointer;   
+}
+
+.pagination-block-end {
+    display: inline-block; 
+    text-align: center;   
+    border: 0px solid rgb(92, 92, 92); 
+    background: rgb(197, 197, 197); 
+    color: rgb(68, 68, 68);
+    font-family: arial;
+    padding: 9px 20px;
+    margin-right: 3px; 
+    transition: 0.5s; 
+    cursor: pointer;   
+}
+
+.pagination-block-end:hover {
+    color: white; 
+    background-color: rgb(48, 48, 49); 
+}
+
+.pagination-block:hover {
+    color: white; 
+    background-color: rgb(48, 48, 49); 
+}
+
+.pagination-block-current {
+    color: white; 
+    background-color: rgb(48, 48, 49);
+    display: inline-block; 
+    text-align: center;   
+    border: 1px solid grey; 
+    font-family: arial;
+    padding: 8px;
+    margin-right: 3px; 
+    transition: 0.5s; 
+    cursor: pointer;    
+}
+
+
+.pagination-container {
+    text-align: center; 
+    padding-top: 20px; 
+}
