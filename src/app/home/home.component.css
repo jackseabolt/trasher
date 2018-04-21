@@ -15,6 +15,7 @@ h2 {
     align-items: center; 
     height: 100vh; 
     background-color: rgb(75, 110, 86); 
+    padding: 20px; 
 }
 
 .logo-inner-container {
@@ -78,4 +79,18 @@ h2 {
 }
 @media all and (max-width: 500px) {
 .vid-info .acronym { display: none; }
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-family: 'Leckerli One', cursive;
+        font-size: 60px; 
+        line-height: 0px; 
+    }
+    
+    h2 {
+        font-family: 'Raleway', sans-serif;  
+        margin-bottom: 50px;
+        font-size: 18px; 
+    }
 }

@@ -23,3 +23,9 @@ h4 {
     float: right;
     color: rgb(178, 216, 178);  
 }
+
+@media screen and (max-width: 600px) {
+    .fa-check {
+        display: none; 
+    }
+}
