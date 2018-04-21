@@ -6,9 +6,18 @@
         (viewAll)="handleViewAll()"
     ></SearchForm>
     <BoardItem 
-        *ngFor="let item of items" 
+        *ngFor="let item of currentItems" 
         [item]="item" 
         (delete)="handleDelete()"
         (click)="handleFocus(item)"
     ></BoardItem>
+    <div *ngIf="pagination > 1" class="pagination-container">
+        <div *ngIf="current > 0" class="pagination-block-end" (click)="decreaseCurrent()">Prev</div>
+        <div 
+            class="pagination-block" 
+            *ngFor="let num of paginationArray"
+            (click)="setCurrent(num)"
+        >{{ num }} </div>
+        <div *ngIf="current +1 < pagination" class="pagination-block-end" (click)="increaseCurrent()">Next</div>
+    </div>
 </div>
