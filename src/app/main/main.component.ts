@@ -12,7 +12,7 @@ export class Main implements OnInit {
     items = [];
     started = false; 
     newActivated = false;
-    aboutActivated = true; 
+    aboutActivated = false; 
     current = null; 
     pagination = 1; 
     paginationArray = []; 

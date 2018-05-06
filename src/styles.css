@@ -2,5 +2,5 @@
 body {
     margin: 0px; 
     padding: 0px; 
-    background: rgb(230, 230, 230); 
+    background: linear-gradient(to top right, rgb(208, 208, 216), rgb(255, 255, 255));
 }
