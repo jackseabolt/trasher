@@ -19,6 +19,7 @@ import { About } from './about/about.component';
 import { RecaptchaModule } from 'ng-recaptcha'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { CapitalizeAllPipe } from './pipes/capitalizeall.pipe';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CapitalizeAllPipe } from './pipes/capitalizeall.pipe';
     BrowserAnimationsModule,
     FormsModule, 
     HttpModule, 
-    RecaptchaModule.forRoot(), 
+    RecaptchaModule.forRoot(),
+    Ng4LoadingSpinnerModule.forRoot(),  
     RouterModule.forRoot([
       { path: '', component: Home }, 
       { path: 'main', component: Main }

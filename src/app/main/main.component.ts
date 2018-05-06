@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../services/item.service'; 
+import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 
 @Component({
     selector: 'Main',
@@ -7,8 +8,8 @@ import { ItemService } from '../services/item.service';
     styleUrls: ['./main.component.css']
 })
 export class Main implements OnInit {
-    constructor(private service: ItemService) {}
-  
+    constructor(private service: ItemService, private spinnerService: Ng4LoadingSpinnerService) {}
+
     items = [];
     started = false; 
     newActivated = false;
@@ -22,6 +23,7 @@ export class Main implements OnInit {
     }
 
     handleGetAll() {
+        this.spinnerService.show();
         this.service.getAllItems()
         .subscribe(res => {
             this.items = res.json().items.sort().reverse(); 
@@ -30,8 +32,10 @@ export class Main implements OnInit {
             for(let i = 1; i <= this.pagination; i++) {
                 paginationArray.push(i)
             } 
-            this.paginationArray = paginationArray; 
+            this.paginationArray = paginationArray;
+            this.spinnerService.hide(); 
         }), error => {
+            this.spinnerService.hide(); 
             console.error(error)
         }
     }

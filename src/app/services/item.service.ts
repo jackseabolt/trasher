@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core'; 
 import { Http } from '@angular/http'; 
-// const BASE_URL = 'https://trasher-backend.herokuapp.com'; 
-const BASE_URL = 'http://localhost:8080';
+const BASE_URL = 'https://trasher-backend.herokuapp.com'; 
 
 @Injectable()
 
