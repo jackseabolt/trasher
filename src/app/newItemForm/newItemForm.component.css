@@ -66,13 +66,14 @@ form {
 }
 
 button {
-    padding: 15px 40px; 
+    padding: 20px 0px;
     background-color: rgb(67, 67, 94); 
     font-size: 18px; 
     color: white; 
-    margin-top: 20px; 
+    margin-top: 30px; 
     transition: 0.5s; 
     cursor: pointer; 
+    width: 100%; 
 }
 
 button:hover {
