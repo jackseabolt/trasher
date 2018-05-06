@@ -61,3 +61,19 @@ h1, h2, h3, h4, h5, p {
 p { 
     line-height: 150%; 
 }
+
+@media screen and (max-width: 650px) {
+    .modal {
+        width: calc(100% - 60px); 
+        max-width: 100%;  
+        height: 100vh;  
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+    }
+    .fa-times {
+        position: absolute; 
+        top: 30px; 
+        right: 30px; 
+    }
+}
