@@ -41,7 +41,6 @@ button {
     padding: 20px 0px; 
     font-size: 18px; 
     color: white; 
-    margin-top: 20px; 
     transition: 0.5s; 
     cursor: pointer; 
     border: 0px; 
@@ -49,6 +48,7 @@ button {
 }
 
 .delete-button {
+    margin-top: 20px; 
     background-color: rgb(182, 74, 74); 
 }
 
@@ -58,6 +58,7 @@ button {
 }
 
 .resolve-button {
+    margin-top: 10px; 
     background-color: rgb(65, 114, 85);  
 }
 
