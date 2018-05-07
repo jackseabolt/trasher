@@ -4,6 +4,9 @@
             <iframe title="welcome" src="https://www.youtube.com/embed/vDOhPeNqfJY?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=vDOhPeNqfJY" frameBorder="0" allowFullScreen></iframe>            
         </div>
     </div> 
+    <div class="nav">
+        <p class="about-link" (click)="handleOpenAbout()"><i class="far fa-info-circle"></i>&nbsp;&nbsp;About</p>
+    </div>
     <div class="logo-container">
         <div @fade class="logo-inner-container">
             <h1>Trasher</h1>
@@ -11,4 +14,5 @@
             <a routerLink="/main"><button class="home-button">Get Started</button></a>
         </div>
     </div>
+    <About *ngIf="aboutActivated" (close)="aboutActivated=!aboutActivated"></About>
 </div>

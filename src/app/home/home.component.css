@@ -9,6 +9,27 @@ h2 {
     margin-bottom: 50px;
 }
 
+.nav {
+    position: fixed;
+    color: white; 
+    text-align: right; 
+    padding: 30px 50px; 
+}
+
+.about-link { 
+    position: fixed; 
+    top: 30px;
+    right: 100px;
+    cursor: pointer; 
+    opacity: 0.7; 
+    font-family: arial; 
+    transition: 0.3s;    
+}
+
+.about-link:hover {
+    opacity: 1; 
+}
+
 .logo-container {
     display: flex; 
     justify-content: center; 

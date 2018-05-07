@@ -17,6 +17,11 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 
 export class Home {
     @Output('start') start = new EventEmitter(); 
+    aboutActivated = false; 
+
+    handleOpenAbout() {
+      this.aboutActivated = true; 
+    }
 
     handleStart() {
         this.start.emit(); 
