@@ -14,7 +14,7 @@ h2 {
     justify-content: center; 
     align-items: center; 
     height: 100vh; 
-    background-color: rgb(75, 110, 86); 
+    background-color: rgba(75, 110, 86, 0.7); 
     padding: 20px; 
 }
 
