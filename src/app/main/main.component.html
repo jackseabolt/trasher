@@ -14,6 +14,7 @@
 <About *ngIf="aboutActivated" (close)="aboutActivated=!aboutActivated"></About>
 <div class="container">
     <Board 
+        [searchTerm]="searchTerm"
         [items]="items" 
         [paginationArray]="paginationArray"
         [pagination]="pagination"

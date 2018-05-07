@@ -5,6 +5,9 @@
         (startNew)="handleOpenNew()"
         (viewAll)="handleViewAll()"
     ></SearchForm>
+    <div *ngIf="currentItems.length === 0" id="no-results">
+        <p>Searched for {{ searchTerm }}. No results found</p>
+    </div>
     <BoardItem 
         *ngFor="let item of currentItems" 
         [item]="item" 

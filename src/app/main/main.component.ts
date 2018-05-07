@@ -17,6 +17,7 @@ export class Main implements OnInit {
     current = null; 
     pagination = 1; 
     paginationArray = []; 
+    searchTerm = null; 
 
     ngOnInit() {
         this.handleGetAll();
@@ -64,7 +65,6 @@ export class Main implements OnInit {
 
     handleFocus($event) {
         this.current = $event
-        console.log(this.current)
     }
 
     handleCloseModal() {
@@ -72,6 +72,7 @@ export class Main implements OnInit {
     }
 
     handleSearch($event) {
+        this.searchTerm = $event.searchTerm; 
         this.items = $event.items;
         this.pagination = Math.ceil(this.items.length / 8); 
         let paginationArray = []; 

@@ -57,8 +57,19 @@ div {
     cursor: pointer;    
 }
 
-
 .pagination-container {
     text-align: center; 
     padding-top: 20px; 
+}
+
+#no-results {
+    background: rgb(151, 151, 151);
+    padding: 20px 40px; 
+    margin-bottom: 5px; 
+    border-radius: 2px; 
+    transition: 0.3s; 
+    cursor: pointer;
+    z-index: 5; 
+    text-align: center; 
+    font-family: arial;  
 }

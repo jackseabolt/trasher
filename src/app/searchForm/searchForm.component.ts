@@ -26,11 +26,13 @@ export class SearchForm {
         let city = this.city.toLowerCase(); 
         this.service.getItemByCity(city)
             .subscribe(res => {
-                console.log(res.json())
-                this.search.emit(res.json())
+                // packaging searchTerm with search results 
+                let data = Object.assign({}, res.json(), {
+                    searchTerm: this.city
+                })
+                this.search.emit(data)
             }), 
             err => console.error(err)
-        console.log(this.city)
     }
 
     handleNew() {

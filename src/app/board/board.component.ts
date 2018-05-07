@@ -10,13 +10,14 @@ export class Board implements OnChanges {
     @Input('items') items; 
     @Input('paginationArray') paginationArray; 
     @Input('pagination') pagination; 
+    @Input('searchTerm') searchTerm; 
     @Output('delete') delete = new EventEmitter();
     @Output('focus') focus = new EventEmitter(); 
     @Output('search') search = new EventEmitter(); 
     @Output('startNew') startNew = new EventEmitter(); 
     @Output('viewAll') viewAll = new EventEmitter();
     current = 0; 
-    currentItems; 
+    currentItems;  
     
     ngOnChanges() {
         this.currentItems = this.items.slice(0, 8) 
@@ -31,7 +32,7 @@ export class Board implements OnChanges {
     }
 
     handleSearch($event) {
-        this.search.emit($event)
+        this.search.emit($event); 
     }
 
     handleOpenNew() {
