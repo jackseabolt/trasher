@@ -5,9 +5,14 @@
         <li (click)="handleToggleForm()">New</li>
         <li (click)="handleToggleAbout()">About</li>
     </ul>
-    <div class="hamburger">
+    <div class="hamburger" (click)="toggleMobileNav()">
         <div class="hamburger-stripe"></div>
         <div class="hamburger-stripe"></div>
         <div class="hamburger-stripe"></div>
+    </div>
+    <div class="mobile-nav" *ngIf="mobileNavActive">
+        <a routerLink="" (click)="toggleMobileNav()"><li >Home</li></a>
+        <p (click)="handleToggleForm(); toggleMobileNav()">New<p>
+        <p (click)="handleToggleAbout(); toggleMobileNav()">About</p>
     </div>
 </nav>

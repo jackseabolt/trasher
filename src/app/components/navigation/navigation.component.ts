@@ -9,10 +9,15 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class Navigation {
     @Output() start = new EventEmitter(); 
     @Output() startNew = new EventEmitter();
-    @Output() startAbout = new EventEmitter();  
+    @Output() startAbout = new EventEmitter();
+    mobileNavActive: boolean = false;   
 
     handleHome() {
         this.start.emit(); 
+    }
+
+    toggleMobileNav() {
+        this.mobileNavActive = !this.mobileNavActive; 
     }
 
     handleToggleForm() {
