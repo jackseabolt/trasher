@@ -1,24 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppComponent } from './app/app.component';
-import { NewItemForm } from './newItemForm/newItemForm.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { RouterModule} from '@angular/router'; 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { About } from './components/about/about.component';
+import { AppComponent } from './components/app/app.component';
+import { NewItemForm } from './components/newItemForm/newItemForm.component';
+import { Board } from './components/board/board.component';
+import { BoardItem } from './components/boardItem/boardItem.component'; 
+import { Home } from './components/home/home.component'; 
+import { Navigation } from './components/navigation/navigation.component';
+import { Main } from './components/main/main.component';
+import { FocusItemModal } from './components/focusItemModal/focusItemModal.component';
+import { SearchForm } from './components/searchForm/searchForm.component';
+import { SummaryPipe } from './components/pipes/summary.pipe';
+import { CapitalizeAllPipe } from './components/pipes/capitalizeall.pipe';
+import { CapitalizePipe } from './components/pipes/capitalize.pipe';
 import { ItemService } from './services/item.service';
-import { Board } from './board/board.component';
-import { BoardItem } from './boardItem/boardItem.component'; 
-import { Home } from './home/home.component'; 
-import { Navigation } from './navigation/navigation.component';
-import { Main } from './main/main.component';
-import { RouterModule} from '@angular/router'; 
-import { FocusItemModal } from './focusItemModal/focusItemModal.component';
-import { SearchForm } from './searchForm/searchForm.component';
-import { SummaryPipe } from './pipes/summary.pipe';
-import { CapitalizePipe } from './pipes/capitalize.pipe';
-import { About } from './about/about.component';
 import { RecaptchaModule } from 'ng-recaptcha'; 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { CapitalizeAllPipe } from './pipes/capitalizeall.pipe';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 

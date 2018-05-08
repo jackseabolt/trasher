@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core'; 
 import { FormGroup, FormControl, Validators } from '@angular/forms'; 
-import { ItemService } from '../services/item.service'; 
+import { ItemService } from '../../services/item.service'; 
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
