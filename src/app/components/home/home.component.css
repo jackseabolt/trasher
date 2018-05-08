@@ -64,6 +64,29 @@ h2 {
     border: 0px solid rgba(27, 41, 32, 0.6);
 }
 
+@media screen and (max-width: 930px) {  
+    .about-link { 
+        right: 100px;
+    }
+}
+
+@media screen and (max-width: 520px) {  
+    .about-link { 
+        top: 30px;
+        right: 60px;
+    }
+}
+
+@media screen and (max-width: 470px) {  
+    video { 
+        display: none; 
+    }
+    .logo-container {
+        background-color: rgba(75, 110, 86, 1); 
+    }
+}
+
+
 
 * { box-sizing: border-box; }
 .video-background {
