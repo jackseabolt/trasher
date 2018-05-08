@@ -1,11 +1,10 @@
 <div class="form-container">
     <form >
         <div>
-            <input [(ngModel)]="city" name="city" placeholder="Search by city"/>
-            <button (click)="submitSearch()">Search</button>
+            <input [(ngModel)]="city" name="city" placeholder="Search by city"/> <button class="button-search" (click)="submitSearch()"><i class="fas fa-search"></i></button>
             <div class="float-right">
-                <button (click)="handleNew()">New Report</button>
-                <button (click)="handleViewAll()">View All</button>
+                <button class="button" (click)="handleNew()">New Report</button>
+                <button class="button" (click)="handleViewAll()">View All</button>
             </div>
         </div>
         <p *ngIf="error" class="error">{{ error }}</p>
