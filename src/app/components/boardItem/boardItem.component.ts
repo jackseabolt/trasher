@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core'; 
-import { ItemService } from '../services/item.service';
+import { ItemService } from '../../services/item.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 
