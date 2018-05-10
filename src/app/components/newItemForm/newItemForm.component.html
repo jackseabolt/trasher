@@ -83,14 +83,14 @@
         <div *ngIf="form.value.desired_reply">
                 <div>
                     <input 
-                        formControlName="phone" 
-                        name="phone" 
-                        placeholder="phone"
+                        formControlName="email" 
+                        name="email" 
+                        placeholder="email"
                         class="input bottom-spacing"
                     >
-                    <div *ngIf="phone.touched && phone.invalid" class="alert">
-                        <div class="alert" *ngIf="phone.errors.minlength">
-                            Phone must contain 10 characters
+                    <div *ngIf="email.touched && email.invalid" class="alert">
+                        <div class="alert" *ngIf="email.errors.minlength">
+                            email must contain 5 characters
                         </div>
                     </div>
                 </div>
