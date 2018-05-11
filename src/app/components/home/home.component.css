@@ -55,6 +55,7 @@ h2 {
     font-size: 22px; 
     transition: 0.3s; 
     cursor: pointer; 
+    display: none; 
     font-family: 'Raleway', sans-serif;  
 }
 
