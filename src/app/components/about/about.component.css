@@ -8,6 +8,7 @@
     display: flex; 
     justify-content: center; 
     align-items: center; 
+    overflow: auto; 
 }
 
 .top-spacing {
@@ -34,7 +35,8 @@
     border-radius: 5px;
     width: 50%; 
     max-width: 400px; 
-    text-align: center;  
+    text-align: center; 
+    min-height: min-content;  
 }
 
 button {
@@ -67,7 +69,7 @@ p {
         width: calc(100% - 60px); 
         max-width: 100%;  
         height: 100vh;  
-        padding-top: 200px; 
+        padding-top: 160px; 
     }
     .fa-times {
         position: absolute; 
