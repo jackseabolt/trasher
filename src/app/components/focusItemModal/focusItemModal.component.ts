@@ -33,7 +33,7 @@ export class FocusItemModal {
             .subscribe(res => {
                 this.delete.emit();
             }),
-            error => console.error(error);  
+            error => {} 
     }
 
     handleResolve() {
@@ -41,6 +41,6 @@ export class FocusItemModal {
             .subscribe(res => {
                 this.resolve.emit(); 
             }), 
-            error => console.error(error);    
+            error => {}    
     }
 }

@@ -79,7 +79,7 @@ export class NewItemForm {
             this.close.emit();
             this.form.reset();  
         }), 
-        error => console.error(error); 
+        error => {} 
     }
 
     handleClose() {

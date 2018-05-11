@@ -37,7 +37,6 @@ export class Main implements OnInit {
             this.spinnerService.hide(); 
         }), error => {
             this.spinnerService.hide(); 
-            console.error(error)
         }
     }
 
@@ -58,9 +57,7 @@ export class Main implements OnInit {
             } 
             this.paginationArray = paginationArray; 
             this.current = newCurrent[0]; 
-        }), error => {
-            console.error(error)
-        }
+        }), error => {}
     }
 
     handleFocus($event) {
